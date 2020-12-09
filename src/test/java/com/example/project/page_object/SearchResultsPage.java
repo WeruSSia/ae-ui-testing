@@ -11,12 +11,12 @@ public class SearchResultsPage {
     @FindBy(xpath = "//div[@data-product-id=\"1399_5795_300\"]")
     private WebElement productTile;
 
-    public SearchResultsPage(WebDriver driver){
+    public SearchResultsPage(WebDriver driver) {
         this.driver = driver;
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
     }
 
-    public void clickOnProductTile(){
+    public void clickOnProductTile() {
         productTile.click();
     }
 }
