@@ -11,12 +11,12 @@ public class ShoppingBagPage {
     @FindBy(xpath = "//body/div[2]/div[5]/div[1]/div[2]/div[2]/div[2]/div[1]/div[3]/button[1]")
     private WebElement proceedToCheckoutButton;
 
-    public ShoppingBagPage(WebDriver driver){
-        this.driver=driver;
-        PageFactory.initElements(driver,this);
+    public ShoppingBagPage(WebDriver driver) {
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
     }
 
-    public void clickProceedToCheckout(){
+    public void clickProceedToCheckout() {
         proceedToCheckoutButton.click();
     }
 }
