@@ -26,9 +26,9 @@ public class MainPage {
         acceptCookiesButton.click();
     }
 
-    public void searchForItem(String itemName) {
+    public void searchForProduct(String productName) {
         searchBarButton.click();
-        searchInput.sendKeys(itemName);
+        searchInput.sendKeys(productName);
         searchButton.click();
     }
 }
