@@ -16,6 +16,14 @@ public class ProductPage {
     private WebElement addToBagButton;
     @FindBy(xpath = "//button[@data-tl=\"btn-view-bag\"]")
     private WebElement viewBagButton;
+    @FindBy(xpath = "//body/div[2]/div[5]/div[1]/div[2]/div[2]/div[1]/h1[1]")
+    public WebElement productName;
+    @FindBy(xpath = "//strong[contains(text(),'1399-5795')]")
+    public WebElement style;
+    @FindBy(xpath = "//strong[contains(text(),'300')]")
+    public WebElement color;
+    @FindBy(xpath = "//div[@class=\"product-sale-price ember-view\"]")
+    public WebElement price;
 
 
     public ProductPage(WebDriver driver) {
