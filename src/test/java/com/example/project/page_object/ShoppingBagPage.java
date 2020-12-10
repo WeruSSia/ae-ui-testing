@@ -10,6 +10,10 @@ public class ShoppingBagPage {
 
     @FindBy(xpath = "//body/div[2]/div[5]/div[1]/div[2]/div[2]/div[2]/div[1]/div[3]/button[1]")
     private WebElement proceedToCheckoutButton;
+    @FindBy(xpath = "//body/div[2]/div[5]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/h3[1]/a[1]")
+    public WebElement productName;
+    @FindBy(xpath = "//body/div[2]/div[5]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/span[2]")
+    public WebElement price;
 
     public ShoppingBagPage(WebDriver driver) {
         this.driver = driver;
