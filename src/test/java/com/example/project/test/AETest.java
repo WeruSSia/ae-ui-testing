@@ -3,8 +3,8 @@ package com.example.project.test;
 import com.example.project.page_object.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
@@ -15,7 +15,7 @@ public class AETest {
 
     private WebDriver driver;
 
-    @BeforeSuite
+    @BeforeClass
     public void setUp() {
         driver = new ChromeDriver();
         driver.get("https://www.ae.com/us/en");
@@ -60,7 +60,7 @@ public class AETest {
         checkoutPage.setZipCode("06457");
     }
 
-    @AfterSuite
+    @AfterClass
     public void tearDown() {
         driver.quit();
     }
