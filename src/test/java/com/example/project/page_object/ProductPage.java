@@ -31,7 +31,7 @@ public class ProductPage {
         PageFactory.initElements(driver, this);
     }
 
-    public void clickSelectSize(){
+    public void clickSelectSize() {
         sizeSelect.click();
     }
 
