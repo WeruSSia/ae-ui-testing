@@ -10,10 +10,6 @@ public class ProductPage {
 
     @FindBy(xpath = "//h1[@class='product-name cms-ae-product-name']")
     public WebElement productName;
-    @FindBy(xpath = "//strong[@class='equity-item-prod-id']")
-    public WebElement style;
-    @FindBy(xpath = "//strong[@class='equity-item-color-id']")
-    public WebElement color;
     @FindBy(xpath = "//div[@class='product-sale-price ember-view']")
     public WebElement price;
     @FindBy(xpath = "//div[@aria-label='Size']")
