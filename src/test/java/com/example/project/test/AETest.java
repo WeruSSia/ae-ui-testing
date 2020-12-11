@@ -23,21 +23,16 @@ public class AETest {
     }
 
     @Test
-    public void buyProductTest() throws InterruptedException {
-        String style = "1399-5795";
-        String color = "300";
-
+    public void buyProductTest() {
         MainPage mainPage = new MainPage(driver);
         mainPage.acceptCookies();
         mainPage.chooseCountry();
-        mainPage.searchForProduct(style + " " + color);
+        mainPage.searchForProduct("1399-5795 300");
 
         SearchResultsPage searchResultsPage = new SearchResultsPage(driver);
         searchResultsPage.clickOnProductTile();
 
         ProductPage productPage = new ProductPage(driver);
-        assertThat(productPage.style.getText()).isEqualTo(style);
-        assertThat(productPage.color.getText()).isEqualTo(color);
         String productName = productPage.productName.getText();
         String price = productPage.price.getText();
         productPage.clickSelectSize();
