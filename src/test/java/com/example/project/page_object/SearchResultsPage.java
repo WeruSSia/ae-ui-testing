@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class SearchResultsPage {
     private WebDriver driver;
 
-    @FindBy(xpath = "//body/div[2]/div[5]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/a[1]/div[1]")
+    @FindBy(xpath = "//div[@class=\"tile-images product-tile-image-container\"]")
     private WebElement productTile;
 
     public SearchResultsPage(WebDriver driver) {
