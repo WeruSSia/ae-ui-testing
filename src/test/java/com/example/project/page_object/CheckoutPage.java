@@ -8,20 +8,20 @@ import org.openqa.selenium.support.PageFactory;
 public class CheckoutPage {
     private WebDriver driver;
 
-    @FindBy(xpath="//select[@name=\"countries\"]")
-    private WebElement country;
+    @FindBy(xpath = "//select[@name=\"countries\"]")
+    private WebElement countrySelect;
     @FindBy(xpath = "//input[@name=\"firstname\"]")
-    private WebElement firstName;
+    private WebElement firstNameInput;
     @FindBy(xpath = "//input[@name=\"lastname\"]")
-    private WebElement lastName;
+    private WebElement lastNameInput;
     @FindBy(xpath = "//input[@name=\"streetAddress\"]")
-    private WebElement streetAddress;
+    private WebElement streetAddressInput;
     @FindBy(xpath = "//input[@name=\"city\"]")
-    private WebElement city;
+    private WebElement cityInput;
     @FindBy(xpath = "//select[@name=\"states\"]")
-    private WebElement stateChoiceList;
+    private WebElement statesSelect;
     @FindBy(xpath = "//input[@name=\"postalCode\"]")
-    private WebElement zipCode;
+    private WebElement zipCodeInput;
 
 
     public CheckoutPage(WebDriver driver) {
@@ -29,31 +29,31 @@ public class CheckoutPage {
         PageFactory.initElements(driver, this);
     }
 
-    public void setCountry(String country){
-        this.country.sendKeys(country);
+    public void setCountry(String country) {
+        countrySelect.sendKeys(country);
     }
 
     public void setFirstName(String firstName) {
-        this.firstName.sendKeys(firstName);
+        firstNameInput.sendKeys(firstName);
     }
 
     public void setLastName(String lastName) {
-        this.lastName.sendKeys(lastName);
+        lastNameInput.sendKeys(lastName);
     }
 
     public void setStreetAddress(String streetAddress) {
-        this.streetAddress.sendKeys(streetAddress);
+        streetAddressInput.sendKeys(streetAddress);
     }
 
     public void setCity(String city) {
-        this.city.sendKeys(city);
+        cityInput.sendKeys(city);
     }
 
     public void setState(String state) {
-        stateChoiceList.sendKeys(state);
+        statesSelect.sendKeys(state);
     }
 
     public void setZipCode(String zipCode) {
-        this.zipCode.sendKeys(zipCode);
+        zipCodeInput.sendKeys(zipCode);
     }
 }
