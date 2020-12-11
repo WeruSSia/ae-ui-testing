@@ -10,7 +10,7 @@ public class MainPage {
 
     @FindBy(name = "acceptCookie")
     private WebElement acceptCookiesButton;
-    @FindBy(xpath="//div[@class='flags-wrapper']//div[1]")
+    @FindBy(xpath = "//div[@class='flags-wrapper']//div[1]")
     private WebElement countryButton;
     @FindBy(xpath = "//span[normalize-space()='Search']")
     private WebElement searchBarButton;
@@ -28,7 +28,7 @@ public class MainPage {
         acceptCookiesButton.click();
     }
 
-    public void chooseCountry(){
+    public void chooseCountry() {
         countryButton.click();
     }
 
