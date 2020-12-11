@@ -8,19 +8,19 @@ import org.openqa.selenium.support.PageFactory;
 public class CheckoutPage {
     private WebDriver driver;
 
-    @FindBy(xpath = "//select[@name=\"countries\"]")
+    @FindBy(name = "countries")
     private WebElement countrySelect;
-    @FindBy(xpath = "//input[@name=\"firstname\"]")
+    @FindBy(name = "firstname")
     private WebElement firstNameInput;
-    @FindBy(xpath = "//input[@name=\"lastname\"]")
+    @FindBy(name = "lastname")
     private WebElement lastNameInput;
-    @FindBy(xpath = "//input[@name=\"streetAddress\"]")
+    @FindBy(name = "streetAddress")
     private WebElement streetAddressInput;
-    @FindBy(xpath = "//input[@name=\"city\"]")
+    @FindBy(name = "city")
     private WebElement cityInput;
-    @FindBy(xpath = "//select[@name=\"states\"]")
+    @FindBy(name = "states")
     private WebElement statesSelect;
-    @FindBy(xpath = "//input[@name=\"postalCode\"]")
+    @FindBy(name = "postalCode")
     private WebElement zipCodeInput;
 
 
