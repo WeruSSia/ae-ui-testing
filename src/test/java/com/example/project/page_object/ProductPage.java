@@ -8,19 +8,19 @@ import org.openqa.selenium.support.PageFactory;
 public class ProductPage {
     private WebDriver driver;
 
-    @FindBy(xpath = "//body/div[2]/div[5]/div[1]/div[2]/div[2]/div[2]/div[3]/div[3]/div[1]/div[1]/div[1]/div[1]")
-    private WebElement sizeChoiceList;
+    @FindBy(xpath = "//div[@aria-label=\"Size\"]")
+    private WebElement sizeSelect;
     @FindBy(xpath = "//li[@data-value=\"0034096016\"]")
-    private WebElement sizeM;
+    private WebElement sizeMListItem;
     @FindBy(xpath = "//button[@data-tl=\"btn-add-to-bag\"]")
     private WebElement addToBagButton;
     @FindBy(xpath = "//button[@data-tl=\"btn-view-bag\"]")
     private WebElement viewBagButton;
-    @FindBy(xpath = "//body/div[2]/div[5]/div[1]/div[2]/div[2]/div[1]/h1[1]")
+    @FindBy(css = "h1.product-name.cms-ae-product-name")
     public WebElement productName;
-    @FindBy(xpath = "//strong[contains(text(),'1399-5795')]")
+    @FindBy(xpath = "//strong[@class='equity-item-prod-id']")
     public WebElement style;
-    @FindBy(xpath = "//strong[contains(text(),'300')]")
+    @FindBy(xpath = "//strong[@class='equity-item-color-id']")
     public WebElement color;
     @FindBy(xpath = "//div[@class=\"product-sale-price ember-view\"]")
     public WebElement price;
@@ -32,8 +32,8 @@ public class ProductPage {
     }
 
     public void addProductToBagAndGoToBag() {
-        sizeChoiceList.click();
-        sizeM.click();
+        sizeSelect.click();
+        sizeMListItem.click();
         addToBagButton.click();
         viewBagButton.click();
     }
