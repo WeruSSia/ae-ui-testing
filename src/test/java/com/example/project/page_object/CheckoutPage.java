@@ -8,6 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 public class CheckoutPage {
     private WebDriver driver;
 
+    @FindBy(xpath="//select[@name=\"countries\"]")
+    private WebElement country;
     @FindBy(xpath = "//input[@name=\"firstname\"]")
     private WebElement firstName;
     @FindBy(xpath = "//input[@name=\"lastname\"]")
@@ -16,7 +18,7 @@ public class CheckoutPage {
     private WebElement streetAddress;
     @FindBy(xpath = "//input[@name=\"city\"]")
     private WebElement city;
-    @FindBy(xpath = "//body/div[2]/div[4]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[5]/div[2]/div[1]/div[1]/select[1]")
+    @FindBy(xpath = "//select[@name=\"states\"]")
     private WebElement stateChoiceList;
     @FindBy(xpath = "//input[@name=\"postalCode\"]")
     private WebElement zipCode;
@@ -25,6 +27,10 @@ public class CheckoutPage {
     public CheckoutPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
+    }
+
+    public void setCountry(String country){
+        this.country.sendKeys(country);
     }
 
     public void setFirstName(String firstName) {

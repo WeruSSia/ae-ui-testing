@@ -48,6 +48,7 @@ public class AETest {
         shoppingBagPage.clickProceedToCheckout();
 
         CheckoutPage checkoutPage = new CheckoutPage(driver);
+        checkoutPage.setCountry("United States");
         checkoutPage.setFirstName("John");
         checkoutPage.setLastName("Doe");
         checkoutPage.setStreetAddress("507 Central St.");
