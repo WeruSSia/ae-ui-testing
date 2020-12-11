@@ -19,7 +19,7 @@ public class AETest {
     public void setUp() {
         driver = new ChromeDriver();
         driver.get("https://www.ae.com/us/en");
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
     }
 
     @Test
@@ -40,6 +40,7 @@ public class AETest {
         assertThat(productPage.color.getText()).isEqualTo(color);
         String productName = productPage.productName.getText();
         String price = productPage.price.getText();
+        productPage.clickSelectSize();
         productPage.selectSizeM();
         productPage.clickAddToBagButton();
         productPage.clickViewBagButton();
