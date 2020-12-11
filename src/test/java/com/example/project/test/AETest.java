@@ -29,6 +29,7 @@ public class AETest {
 
         MainPage mainPage = new MainPage(driver);
         mainPage.acceptCookies();
+        mainPage.chooseCountry();
         mainPage.searchForProduct(style + " " + color);
 
         SearchResultsPage searchResultsPage = new SearchResultsPage(driver);
