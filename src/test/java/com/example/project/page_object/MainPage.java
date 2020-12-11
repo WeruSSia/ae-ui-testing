@@ -8,15 +8,15 @@ import org.openqa.selenium.support.PageFactory;
 public class MainPage {
     private WebDriver driver;
 
-    @FindBy(xpath = "//button[@name=\"acceptCookie\"]")
+    @FindBy(name = "acceptCookie")
     private WebElement acceptCookiesButton;
-    @FindBy(xpath="//header/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]")
+    @FindBy(xpath="//div[@class='flags-wrapper']//div[1]")
     private WebElement countryButton;
-    @FindBy(xpath = "//header/div[1]/div[1]/div[2]/ul[1]/li[2]/a[1]/span[1]")
+    @FindBy(xpath = "//span[normalize-space()='Search']")
     private WebElement searchBarButton;
-    @FindBy(xpath = "//input[@name=\"search\"]")
+    @FindBy(name = "search")
     private WebElement searchInput;
-    @FindBy(xpath = "//button[@aria-label=\"Search\"]")
+    @FindBy(xpath = "//button[@aria-label='Search']")
     private WebElement searchButton;
 
     public MainPage(WebDriver driver) {
