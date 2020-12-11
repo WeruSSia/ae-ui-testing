@@ -31,10 +31,16 @@ public class ProductPage {
         PageFactory.initElements(driver, this);
     }
 
-    public void addProductToBagAndGoToBag() {
+    public void selectSizeM(){
         sizeSelect.click();
         sizeMListItem.click();
+    }
+
+    public void clickAddToBagButton(){
         addToBagButton.click();
+    }
+
+    public void clickViewBagButton() {
         viewBagButton.click();
     }
 }

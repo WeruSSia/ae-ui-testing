@@ -40,7 +40,9 @@ public class AETest {
         assertThat(productPage.color.getText()).isEqualTo(color);
         String productName = productPage.productName.getText();
         String price = productPage.price.getText();
-        productPage.addProductToBagAndGoToBag();
+        productPage.selectSizeM();
+        productPage.clickAddToBagButton();
+        productPage.clickViewBagButton();
 
         ShoppingBagPage shoppingBagPage = new ShoppingBagPage(driver);
         assertThat(shoppingBagPage.productName.getText()).isEqualToIgnoringCase(productName);
