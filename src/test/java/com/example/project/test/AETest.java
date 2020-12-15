@@ -35,10 +35,10 @@ public class AETest {
         ProductPage productPage = new ProductPage(driver);
         String productName = productPage.productName.getText();
         String price = productPage.price.getText();
-        productPage.clickSelectSize();
-        productPage.selectSizeM();
-        productPage.clickAddToBagButton();
-        productPage.clickViewBagButton();
+        productPage.clickSelectSize()
+                .selectSizeM()
+                .clickAddToBagButton()
+                .clickViewBagButton();
 
         ShoppingBagPage shoppingBagPage = new ShoppingBagPage(driver);
         assertThat(shoppingBagPage.productName.getText()).isEqualToIgnoringCase(productName);
