@@ -25,9 +25,9 @@ public class AETest {
     @Test
     public void buyProductTest() {
         MainPage mainPage = new MainPage(driver);
-        mainPage.acceptCookies();
-        mainPage.chooseCountry();
-        mainPage.searchForProduct("1399-5795 300");
+        mainPage.acceptCookies()
+                .chooseCountry()
+                .searchForProduct("1399-5795 300");
 
         SearchResultsPage searchResultsPage = new SearchResultsPage(driver);
         searchResultsPage.clickOnProductTile();
@@ -46,13 +46,13 @@ public class AETest {
         shoppingBagPage.clickProceedToCheckout();
 
         CheckoutPage checkoutPage = new CheckoutPage(driver);
-        checkoutPage.setCountry("United States");
-        checkoutPage.setFirstName("John");
-        checkoutPage.setLastName("Doe");
-        checkoutPage.setStreetAddress("507 Central St.");
-        checkoutPage.setCity("Middletown");
-        checkoutPage.setState("Connecticut");
-        checkoutPage.setZipCode("06457");
+        checkoutPage.setCountry("United States")
+                .setFirstName("John")
+                .setLastName("Doe")
+                .setStreetAddress("507 Central St.")
+                .setCity("Middletown")
+                .setState("Connecticut")
+                .setZipCode("06457");
     }
 
     @AfterClass

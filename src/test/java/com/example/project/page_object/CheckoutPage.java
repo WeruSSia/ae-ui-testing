@@ -29,31 +29,38 @@ public class CheckoutPage {
         PageFactory.initElements(driver, this);
     }
 
-    public void setCountry(String country) {
+    public CheckoutPage setCountry(String country) {
         countrySelect.sendKeys(country);
+        return this;
     }
 
-    public void setFirstName(String firstName) {
+    public CheckoutPage setFirstName(String firstName) {
         firstNameInput.sendKeys(firstName);
+        return this;
     }
 
-    public void setLastName(String lastName) {
+    public CheckoutPage setLastName(String lastName) {
         lastNameInput.sendKeys(lastName);
+        return this;
     }
 
-    public void setStreetAddress(String streetAddress) {
+    public CheckoutPage setStreetAddress(String streetAddress) {
         streetAddressInput.sendKeys(streetAddress);
+        return this;
     }
 
-    public void setCity(String city) {
+    public CheckoutPage setCity(String city) {
         cityInput.sendKeys(city);
+        return this;
     }
 
-    public void setState(String state) {
+    public CheckoutPage setState(String state) {
         statesSelect.sendKeys(state);
+        return this;
     }
 
-    public void setZipCode(String zipCode) {
+    public CheckoutPage setZipCode(String zipCode) {
         zipCodeInput.sendKeys(zipCode);
+        return this;
     }
 }

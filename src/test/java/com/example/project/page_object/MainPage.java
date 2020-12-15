@@ -24,17 +24,20 @@ public class MainPage {
         PageFactory.initElements(driver, this);
     }
 
-    public void acceptCookies() {
+    public MainPage acceptCookies() {
         acceptCookiesButton.click();
+        return this;
     }
 
-    public void chooseCountry() {
+    public MainPage chooseCountry() {
         countryButton.click();
+        return this;
     }
 
-    public void searchForProduct(String productName) {
+    public MainPage searchForProduct(String productName) {
         searchBarButton.click();
         searchInput.sendKeys(productName);
         searchButton.click();
+        return this;
     }
 }

@@ -8,9 +8,9 @@ import org.openqa.selenium.support.PageFactory;
 public class ProductPage {
     private WebDriver driver;
 
-    @FindBy(css="h1.cms-ae-product-name")
+    @FindBy(css = "h1.cms-ae-product-name")
     public WebElement productName;
-    @FindBy(css="div.product-sale-price")
+    @FindBy(css = "div.product-sale-price")
     public WebElement price;
     @FindBy(xpath = "//div[@aria-label='Size']")
     private WebElement sizeSelect;
@@ -27,19 +27,23 @@ public class ProductPage {
         PageFactory.initElements(driver, this);
     }
 
-    public void clickSelectSize() {
+    public ProductPage clickSelectSize() {
         sizeSelect.click();
+        return this;
     }
 
-    public void selectSizeM() {
+    public ProductPage selectSizeM() {
         sizeMListItem.click();
+        return this;
     }
 
-    public void clickAddToBagButton() {
+    public ProductPage clickAddToBagButton() {
         addToBagButton.click();
+        return this;
     }
 
-    public void clickViewBagButton() {
+    public ProductPage clickViewBagButton() {
         viewBagButton.click();
+        return this;
     }
 }
