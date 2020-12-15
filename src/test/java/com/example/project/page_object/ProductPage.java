@@ -8,9 +8,9 @@ import org.openqa.selenium.support.PageFactory;
 public class ProductPage {
     private WebDriver driver;
 
-    @FindBy(xpath = "//h1[@class='product-name cms-ae-product-name']")
+    @FindBy(css="h1.cms-ae-product-name")
     public WebElement productName;
-    @FindBy(xpath = "//div[@class='product-sale-price ember-view']")
+    @FindBy(css="div.product-sale-price")
     public WebElement price;
     @FindBy(xpath = "//div[@aria-label='Size']")
     private WebElement sizeSelect;
